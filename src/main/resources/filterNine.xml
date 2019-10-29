@@ -1,0 +1,10 @@
+<ns:AndFilter xmlns:ns="es.upc.dmag.dispatcher">
+    <ns:NumDeletionsBin>
+        <ns:lowerBound>1</ns:lowerBound>
+        <ns:upperBound>100</ns:upperBound>
+    </ns:NumDeletionsBin>
+    <ns:NumInsertionsBin>
+        <ns:lowerBound>1</ns:lowerBound>
+        <ns:upperBound>100</ns:upperBound>
+    </ns:NumInsertionsBin>
+</ns:AndFilter>

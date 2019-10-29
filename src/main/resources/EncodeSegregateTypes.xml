@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ns:Rules xmlns:ns="es.upc.dmag.dispatcher">
+    <ns:markMapped>true</ns:markMapped>
+    <ns:markUnmapped>true</ns:markUnmapped>
+    <ns:markHasPairedEnded>true</ns:markHasPairedEnded>
+    <ns:markHasSingleEnded>true</ns:markHasSingleEnded>
+    <ns:markHasOpticalDuplicateRule>true</ns:markHasOpticalDuplicateRule>
+    <ns:markGroup>true</ns:markGroup>
+    <ns:numDeletionsBins>
+        <ns:boundary>1</ns:boundary>
+    </ns:numDeletionsBins>
+    <ns:numInsertionsBins>
+        <ns:boundary>1</ns:boundary>
+    </ns:numInsertionsBins>
+    <ns:numMismatchesBins>
+        <ns:boundary>1</ns:boundary>
+    </ns:numMismatchesBins>
+    <ns:numSplicesBins>
+        <ns:boundary>1</ns:boundary>
+    </ns:numSplicesBins>
+</ns:Rules>

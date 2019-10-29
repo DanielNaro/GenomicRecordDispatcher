@@ -1,0 +1,14 @@
+<ns:AndFilter xmlns:ns="es.upc.dmag.dispatcher">
+    <ns:HasMapped>
+        <ns:value>true</ns:value>
+        <ns:forAllReads>false</ns:forAllReads>
+    </ns:HasMapped>
+    <ns:HasOptical>
+        <ns:value>false</ns:value>
+        <ns:forAllReads>true</ns:forAllReads>
+    </ns:HasOptical>
+    <ns:HasUnmapped>
+        <ns:value>true</ns:value>
+        <ns:forAllReads>false</ns:forAllReads>
+    </ns:HasUnmapped>
+</ns:AndFilter>

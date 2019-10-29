@@ -1,0 +1,6 @@
+<ns:SecurityRules xmlns:ns="es.upc.dmag.dispatcher">
+    <ns:securityRule>
+        <ns:anyRegion/>
+        <ns:anyBody/>
+    </ns:securityRule>
+</ns:SecurityRules>

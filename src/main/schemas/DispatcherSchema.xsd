@@ -1,0 +1,495 @@
+<?xml version="1.0"?>
+<xs:schema
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="es.upc.dmag.dispatcher"
+        xmlns:ns="es.upc.dmag.dispatcher"
+        elementFormDefault="qualified"
+        version="1.1"
+>
+    <xs:element name="Rules" type="ns:RulesType"/>
+
+    <xs:complexType name="RulesType">
+        <xs:sequence>
+            <xs:element name="markMapped" type="xs:boolean" default="false"
+                        minOccurs="0"/>
+            <xs:element name="markUnmapped" type="xs:boolean" default="false"
+                        minOccurs="0"/>
+            <xs:element name="markHasPairedEnded" type="xs:boolean"
+                        default="false"
+                        minOccurs="0"/>
+            <xs:element name="markHasSingleEnded" type="xs:boolean"
+                        default="false"
+                        minOccurs="0"/>
+            <xs:element name="markHasOpticalDuplicateRule" type="xs:boolean"
+                        default="false"
+                        minOccurs="0"/>
+            <xs:element name="markGroup" type="xs:boolean"
+                        default="false"
+                        minOccurs="0"/>
+            <xs:element name="deletionsLengthFractionBins"
+                        minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="boundary" maxOccurs="unbounded"
+                                    type="xs:decimal"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="deletionsLengthBins"
+                        minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="boundary" maxOccurs="unbounded"
+                                    type="xs:positiveInteger"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="insertionsLengthFractionBins"
+                        minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="boundary" maxOccurs="unbounded"
+                                    type="xs:decimal"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="insertionsLengthBins"
+                        minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="boundary" maxOccurs="unbounded"
+                                    type="xs:positiveInteger"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="mismatchedLengthFractionBins"
+                        minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="boundary" maxOccurs="unbounded"
+                                    type="xs:decimal"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="mismatchedLengthBins"
+                        minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="boundary" maxOccurs="unbounded"
+                                    type="xs:positiveInteger"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="mismatchedBasesFractionBins"
+                        minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="boundary" maxOccurs="unbounded"
+                                    type="xs:decimal"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="mismatchedBasesBins"
+                        minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="boundary" maxOccurs="unbounded"
+                                    type="xs:positiveInteger"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="maximalQualityBins"
+                        minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="boundary" maxOccurs="unbounded"
+                                    type="xs:positiveInteger"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="minimalQualityBins"
+                        minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="boundary" maxOccurs="unbounded"
+                                    type="xs:positiveInteger"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="numDeletionsBins"
+                        minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="boundary" maxOccurs="unbounded"
+                                    type="xs:positiveInteger"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="numDeletionsFractionBins"
+                        minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="boundary" maxOccurs="unbounded"
+                                    type="xs:decimal"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="numInsertionsBins"
+                        minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="boundary" maxOccurs="unbounded"
+                                    type="xs:positiveInteger"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="numInsertionsFractionBins"
+                        minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="boundary" maxOccurs="unbounded"
+                                    type="xs:decimal"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="numMismatchesBins"
+                        minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="boundary" maxOccurs="unbounded"
+                                    type="xs:positiveInteger"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="numMismatchesFractionBins"
+                        minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="boundary" maxOccurs="unbounded"
+                                    type="xs:decimal"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="numSplicesBins"
+                        minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="boundary" maxOccurs="unbounded"
+                                    type="xs:positiveInteger"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="numSplicesFractionBins"
+                        minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="boundary" maxOccurs="unbounded"
+                                    type="xs:decimal"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="spliceLengthBins"
+                        minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="boundary" maxOccurs="unbounded"
+                                    type="xs:positiveInteger"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="spliceLengthFractionBins"
+                        minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="boundary" maxOccurs="unbounded"
+                                    type="xs:decimal"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="alignmentScoreBins"
+                        minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="boundary" maxOccurs="unbounded"
+                                    type="xs:positiveInteger"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="AndFilter" type="ns:AndFilterType"/>
+
+    <xs:complexType name="AndFilterType">
+            <xs:sequence>
+                <xs:element name="AlignmentScoreBin" type="ns:AlignmentScoreBinFilter" minOccurs="0"/>
+                <xs:element name="DeletionsLengthBin" type="ns:DeletionsLengthBinFilter" minOccurs="0"/>
+                <xs:element name="DeletionsLengthFractionBin" type="ns:DeletionsLengthFractionBinFilter" minOccurs="0"/>
+                <xs:element name="HasMapped" type="ns:HasMappedFilter" minOccurs="0"/>
+                <xs:element name="HasOptical" type="ns:HasOpticalDuplicateFilter" minOccurs="0"/>
+                <xs:element name="HasPairedEnded" type="ns:HasPairedEnded" minOccurs="0"/>
+                <xs:element name="HasSignleEnded" type="ns:HasSingleEnded" minOccurs="0"/>
+                <xs:element name="HasUnmapped" type="ns:HasUnmapped" minOccurs="0"/>
+                <xs:element name="Group" type="ns:GroupFilter" minOccurs="0"/>
+                <xs:element name="InsertionsLengthBin" type="ns:InsertionsLengthBin" minOccurs="0"/>
+                <xs:element name="InsertionsLengthFractionBin" type="ns:InsertionsLengthFractionBin" minOccurs="0"/>
+                <xs:element name="MaximialQualityBin" type="ns:MaximialQualityBin" minOccurs="0"/>
+                <xs:element name="MinimalQualityBin" type="ns:MinimalQualityBin" minOccurs="0"/>
+                <xs:element name="MismatchedBasesBin" type="ns:MismatchedBasesBin" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="MismatchedBasesFractionBin" type="ns:MismatchedBasesFractionBin" minOccurs="0"/>
+                <xs:element name="NumDeletionsBin" type="ns:NumDeletionsBin" minOccurs="0"/>
+                <xs:element name="NumDeletionsFractionBin" type="ns:NumDeletionsFractionBin" minOccurs="0"/>
+                <xs:element name="NumInsertionsBin" type="ns:NumInsertionsBin" minOccurs="0"/>
+                <xs:element name="NumInsertionsFractionBin" type="ns:NumInsertionsFractionBin" minOccurs="0"/>
+                <xs:element name="NumMismatchesBin" type="ns:NumMismatchesBin" minOccurs="0"/>
+                <xs:element name="NumMismatchesFractionBin" type="ns:NumMismatchesFractionBin" minOccurs="0"/>
+                <xs:element name="NumSplicesBin" type="ns:NumSplicesBin" minOccurs="0"/>
+                <xs:element name="NumSplicesFractionBin" type="ns:NumSplicesFractionBin" minOccurs="0"/>
+                <xs:element name="SplicesLengthBin" type="ns:SplicesLengthBin" minOccurs="0"/>
+                <xs:element name="SplicesLengthFractionBin" type="ns:SplicesLengthFractionBin" minOccurs="0"/>
+            </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="IntRangeType">
+        <xs:sequence>
+            <xs:element name="lowerBound" type="xs:integer"/>
+            <xs:element name="upperBound" type="xs:integer"/>
+            <xs:element name="forAllReads" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DecimalRangeType">
+        <xs:sequence>
+            <xs:element name="lowerBound" type="xs:decimal"/>
+            <xs:element name="upperBound" type="xs:decimal"/>
+            <xs:element name="forAllReads" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="BooleanFilter">
+        <xs:sequence>
+            <xs:element name="value" type="xs:boolean"/>
+            <xs:element name="forAllReads" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AlignmentScoreBinFilter">
+        <xs:complexContent>
+            <xs:extension base="ns:IntRangeType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="DeletionsLengthBinFilter">
+        <xs:complexContent>
+            <xs:extension base="ns:IntRangeType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="GroupFilter">
+        <xs:sequence>
+            <xs:element name="value" type="xs:string"/>
+            <xs:element name="forAllReads" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DeletionsLengthFractionBinFilter">
+        <xs:complexContent>
+            <xs:extension base="ns:DecimalRangeType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="HasMappedFilter">
+        <xs:complexContent>
+            <xs:extension base="ns:BooleanFilter">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="HasOpticalDuplicateFilter">
+        <xs:complexContent>
+            <xs:extension base="ns:BooleanFilter">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="HasPairedEnded">
+        <xs:complexContent>
+            <xs:extension base="ns:BooleanFilter">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="HasSingleEnded">
+        <xs:complexContent>
+            <xs:extension base="ns:BooleanFilter">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="HasUnmapped">
+        <xs:complexContent>
+            <xs:extension base="ns:BooleanFilter">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="InsertionsLengthBin">
+        <xs:complexContent>
+            <xs:extension base="ns:IntRangeType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="InsertionsLengthFractionBin">
+        <xs:complexContent>
+            <xs:extension base="ns:DecimalRangeType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="MaximialQualityBin">
+        <xs:complexContent>
+            <xs:extension base="ns:IntRangeType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="MinimalQualityBin">
+        <xs:complexContent>
+            <xs:extension base="ns:IntRangeType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="MismatchedBasesBin">
+        <xs:complexContent>
+            <xs:extension base="ns:IntRangeType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="MismatchedBasesFractionBin">
+        <xs:complexContent>
+            <xs:extension base="ns:DecimalRangeType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="NumDeletionsBin">
+        <xs:complexContent>
+            <xs:extension base="ns:IntRangeType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="NumDeletionsFractionBin">
+        <xs:complexContent>
+            <xs:extension base="ns:DecimalRangeType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="NumInsertionsBin">
+        <xs:complexContent>
+            <xs:extension base="ns:IntRangeType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="NumInsertionsFractionBin">
+        <xs:complexContent>
+            <xs:extension base="ns:DecimalRangeType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="NumMismatchesBin">
+        <xs:complexContent>
+            <xs:extension base="ns:IntRangeType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="NumMismatchesFractionBin">
+        <xs:complexContent>
+            <xs:extension base="ns:DecimalRangeType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="NumSplicesBin">
+        <xs:complexContent>
+            <xs:extension base="ns:IntRangeType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="NumSplicesFractionBin">
+        <xs:complexContent>
+            <xs:extension base="ns:DecimalRangeType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SplicesLengthBin">
+        <xs:complexContent>
+            <xs:extension base="ns:IntRangeType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SplicesLengthFractionBin">
+        <xs:complexContent>
+            <xs:extension base="ns:DecimalRangeType">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="SecurityRules" type="ns:SecurityRulesType"/>
+
+    <xs:complexType name="SecurityRulesType">
+        <xs:sequence>
+            <xs:element name="securityRule" type="ns:SecurityRuleType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="SecurityRuleType">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element name="anyRegion" type="ns:AnyRegionType"/>
+                <xs:element name="region" type="ns:RegionType"/>
+            </xs:choice>
+            <xs:choice>
+                <xs:element name="anyBody" type="ns:AnyBodyType"/>
+                <xs:element name="recipients" type="ns:RecipientsType"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AnyRegionType">
+    </xs:complexType>
+
+    <xs:complexType name="RegionType">
+        <xs:sequence>
+            <xs:element name="referenceId" type="xs:int"/>
+            <xs:element name="start" type="xs:integer"/>
+            <xs:element name="end" type="xs:positiveInteger"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AnyBodyType">
+    </xs:complexType>
+
+    <xs:complexType name="RecipientsType">
+        <xs:sequence>
+            <xs:element name="Recipient" type="xs:string" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+
+</xs:schema>

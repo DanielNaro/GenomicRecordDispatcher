@@ -1,0 +1,5 @@
+<ns:AndFilter xmlns:ns="es.upc.dmag.dispatcher">
+    <ns:Group>
+        <ns:value>1#50</ns:value>
+    </ns:Group>
+</ns:AndFilter>

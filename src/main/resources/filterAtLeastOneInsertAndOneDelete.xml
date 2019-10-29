@@ -1,0 +1,23 @@
+<ns:AndFilter xmlns:ns="es.upc.dmag.dispatcher">
+    <ns:HasMapped>
+        <ns:value>true</ns:value>
+    </ns:HasMapped>
+    <ns:HasOptical>
+        <ns:value>false</ns:value>
+    </ns:HasOptical>
+    <ns:HasUnmapped>
+        <ns:value>false</ns:value>
+    </ns:HasUnmapped>
+    <ns:NumDeletionsBin>
+        <ns:lowerBound>1</ns:lowerBound>
+        <ns:upperBound>200</ns:upperBound>
+    </ns:NumDeletionsBin>
+    <ns:NumInsertionsBin>
+        <ns:lowerBound>1</ns:lowerBound>
+        <ns:upperBound>200</ns:upperBound>
+    </ns:NumInsertionsBin>
+    <ns:NumMismatchesBin>
+        <ns:lowerBound>0</ns:lowerBound>
+        <ns:upperBound>200</ns:upperBound>
+    </ns:NumMismatchesBin>
+</ns:AndFilter>
