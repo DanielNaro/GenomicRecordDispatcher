@@ -37,7 +37,7 @@
                     <!--
                         Package name of the generated sources.
                     -->
-                    <packageName></packageName>
+                    <packageName>es.upc.dmag.dispatcher.parser</packageName>
 
                 </configuration>
             </plugin>

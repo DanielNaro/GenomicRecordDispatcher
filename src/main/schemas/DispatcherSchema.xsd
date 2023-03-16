@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <xs:schema
         xmlns:xs="http://www.w3.org/2001/XMLSchema"
-        targetNamespace="es.upc.dmag.dispatcher"
-        xmlns:ns="es.upc.dmag.dispatcher"
+        targetNamespace="dispatcher.dmag.upc.es"
+        xmlns:ns="dispatcher.dmag.upc.es"
         elementFormDefault="qualified"
         version="1.1"
 >

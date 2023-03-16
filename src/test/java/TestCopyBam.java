@@ -1,10 +1,11 @@
+import es.upc.dmag.dispatcher.AbstractTag;
+import es.upc.dmag.dispatcher.GlobalRecord;
+import es.upc.dmag.dispatcher.UnclosableFileOutputStream;
 import htsjdk.samtools.*;
 import org.junit.Test;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
