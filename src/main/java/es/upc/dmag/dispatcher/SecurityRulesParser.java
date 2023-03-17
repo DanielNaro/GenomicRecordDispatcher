@@ -9,16 +9,17 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.TreeSet;
 
 public class SecurityRulesParser {
-    public static SecurityRule parse(String securityRulesPath) throws JAXBException {
+    public static SecurityRule parse(Path securityRulesPath) throws JAXBException {
         JAXBContext jc = JAXBContext.newInstance(ObjectFactory.class);
 
         Unmarshaller unmarshaller = jc.createUnmarshaller();
         SecurityRulesType securityRules =
-                ((JAXBElement<SecurityRulesType>) unmarshaller.unmarshal(Paths.get(securityRulesPath).toFile())).getValue();
+                ((JAXBElement<SecurityRulesType>) unmarshaller.unmarshal(securityRulesPath.toFile())).getValue();
 
 
         SecurityRule securityRule = new SecurityRule();

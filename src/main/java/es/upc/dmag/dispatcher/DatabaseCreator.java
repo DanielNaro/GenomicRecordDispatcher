@@ -1,5 +1,6 @@
 package es.upc.dmag.dispatcher;
 
+import java.nio.file.Path;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -7,7 +8,7 @@ import java.util.List;
 
 public class DatabaseCreator {
     public static Connection createDB(
-            String fileName,
+            Path fileName,
             Collection<Rule> rules
     ){
         List<Rule> singleTagRules = new ArrayList<>();
@@ -25,7 +26,7 @@ public class DatabaseCreator {
         try
         {
             // create a database connection
-            String connectionName = "jdbc:sqlite:"+fileName;
+            String connectionName = "jdbc:sqlite:"+fileName.toString();
             System.out.println("Connection to "+connectionName);
             connection = DriverManager.getConnection(connectionName);
             Statement statement = connection.createStatement();
